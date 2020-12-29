@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SplashActivity extends AppCompatActivity implements Animation.AnimationListener {
@@ -15,9 +16,8 @@ public class SplashActivity extends AppCompatActivity implements Animation.Anima
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        getSupportActionBar().hide();
 
-        Typeface miFuente = Typeface.createFromAsset(getAssets(), "MerryChristmasFlake.ttf");
+        Typeface miFuente = Typeface.createFromAsset(getAssets(), "lady_radical.ttf");
         TextView texto = findViewById(R.id.textoSplash);
         texto.setTypeface(miFuente);
 
