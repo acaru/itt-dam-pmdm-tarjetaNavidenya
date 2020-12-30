@@ -18,15 +18,21 @@ public class SplashActivity extends AppCompatActivity implements Animation.Anima
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        //Instanciar fuentes externas
         Typeface miFuente = Typeface.createFromAsset(getAssets(), "lady_radical.ttf");
+
+        //Generar texto y usar la fuente
         TextView texto = findViewById(R.id.textoSplash);
         texto.setTypeface(miFuente);
 
+        //Crear animación del texto y ejecutarla
         Animation animacion = AnimationUtils.loadAnimation(this, R.anim.splash);
         texto.startAnimation(animacion);
 
+        //Setear listener para modificar según estado de la animación
         animacion.setAnimationListener(this);
 
+        //Crear efecto de sonido y ejecutarlo
         MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.efectosplash);
         mediaPlayer.start();
     }
@@ -36,6 +42,7 @@ public class SplashActivity extends AppCompatActivity implements Animation.Anima
 
     }
 
+    //Crear intent con las distintas "activities" para pasar de una a otra
     @Override
     public void onAnimationEnd(Animation animation) {
         Intent intent = new Intent(SplashActivity.this, MainActivity.class);

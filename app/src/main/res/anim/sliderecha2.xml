@@ -6,7 +6,7 @@
         android:fromYDelta="0"
         android:toYDelta="0"
         android:fromXDelta="0"
-        android:toXDelta="250"
+        android:toXDelta="150"
         android:duration="3000"
         />
 
@@ -15,7 +15,7 @@
         android:fromYDelta="0"
         android:toYDelta="0"
         android:fromXDelta="0"
-        android:toXDelta="-250"
+        android:toXDelta="-150"
         android:duration="3000"
         />
 

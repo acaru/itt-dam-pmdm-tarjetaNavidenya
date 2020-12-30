@@ -21,10 +21,12 @@ public class MainActivity extends AppCompatActivity {
         /*Método alternativo para ocultar el Action Bar
         getSupportActionBar().hide();
         */
+
+        //Instanciar animaciones para el avatar y para el titulo
         Animation animAparecer = AnimationUtils.loadAnimation(this, R.anim.aparecer);
         Animation animDerecha = AnimationUtils.loadAnimation(this, R.anim.sliderecha2);
 
-        //Animacion y foto de avatar
+        //Instanciar avatar y le asigno una animación
         ImageView albertoAvatar = (ImageView) findViewById(R.id.avatar2);
         albertoAvatar.startAnimation(animDerecha);
 
@@ -33,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
         TextView titulo = findViewById(R.id.titulo);
         titulo.setTypeface(miFuente);
 
+        //Comenzar animación de aparecer
         titulo.startAnimation(animAparecer);
 
+        //Crear un objeto mediplayer para comenzar el sonido y en bucle para que no se acabe
         MediaPlayer mediaPlayer = MediaPlayer.create(this,R.raw.jingle_bells_8bit);
         mediaPlayer.start();
         mediaPlayer.setLooping(true);
